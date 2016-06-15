@@ -57,11 +57,7 @@ result =
 
 	else
 		p "Results inconclusive"
-	end
-	]
-
-
-
+	end]
 employees.each_with_index do |result, index|
   puts "Candidate #{index} is #{result}!"
   i+=1
