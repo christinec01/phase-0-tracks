@@ -1,20 +1,38 @@
-header {
-background-color: yellow;
+body {
+  background-color: #98AFC7;
+  margin: 2%;
 }
 
+header {
+  border: 2px dotted black;
+  padding: 10px;
+}
+
+.column-1 h2 {
+  color:red;
+}
 .column-1 {
   float: right;
-  width: 50%;
-  background-color: blue;
+  width: 48%;
+  padding: 10px;
 }
 
 .column-2 {
   float: left;
-  width: 50%;
-  background-color: red;
+  width: 48%;
+  padding: 10px;
 }
 
 footer {
-  clear: both;
-  background-color: orange;
+ clear: both;
+ font-size: .8em;
+ font-style: italic;
+}
+
+header, footer {
+  background-color: green;
+}
+
+a:visited {
+  color: red;
 }
