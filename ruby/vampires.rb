@@ -10,8 +10,6 @@ i=0
 until i>= num_candidates do
 result =
 
-
-
 	puts "What is your name?"
 	name = gets.chomp
 	fang_name = name == ("Drake Cula" || "Tu Fang")
