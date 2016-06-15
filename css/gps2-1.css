@@ -1,3 +1,20 @@
-body{
-background-color: blue;
+header {
+background-color: yellow;
+}
+
+.column-1 {
+  float: right;
+  width: 50%;
+  background-color: blue;
+}
+
+.column-2 {
+  float: left;
+  width: 50%;
+  background-color: red;
+}
+
+footer {
+  clear: both;
+  background-color: orange;
 }
