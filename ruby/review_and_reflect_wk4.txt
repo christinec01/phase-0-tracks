@@ -1,0 +1,37 @@
+VARIABLES
+1.What is a variable? Why might a programmer use a variable?
+A variable is a way to store information. A programmer might use a variable
+to store the result of something like a method so they can use the variable rather than retype the method
+every time they need to use it. It also helps improve the readability of the code, assuming their variables
+are named clearly and simply.
+2. Ruby will run "full_name=..." and then whatever is on the right of the equals sign will now be what Ruby will
+use wherever you type full_name, then it will return "AbrahamLincoln".
+
+DATA TYPES
+string: A line of text. You may use it to prompt the user to do something.
+integer: A number. You may use it to loop through something x number of times.
+float: A fraction of a number. You may use it to get an exact number back.
+nil: a "blank". Might be used to indicate that something has been intentionally left blank.
+boolean: T/F. Might be used in an if or elsif statement.
+
+ALGORITHMS
+An algorithm is a really specific step by step set of instructions on how to complete a task.
+
+METHODS
+1.  A method is a series of commands executed on a given number of inputs.
+A programmer might use a method in order to carry out a specific set of commands
+on many different sets of inputs.
+
+return value- the product you get from a method.
+side effect - an unintended impact of the method running
+parameter -the type of input you use
+argument- the code your input will be passed into.
+implicit return- describes a language such as ruby that will return without having to be told to.
+
+CONTROL FLOW
+loop- runs over and over until something changes
+if- conditional function that allows you to set an outcome based on different situations.
+else- else is the alternative option of the "if" parameter.
+elsif- allows several different outcomes of "if".
+while- a loop that says "as long as 'this thing is the way it is' keep looping"
+until- a loop that says "keep looping until 'this thing' happens"
