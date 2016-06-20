@@ -1,0 +1,21 @@
+
+  #swap first and last name
+  #change all of the vowels to the next vowel in (aeiou)
+  #change all the consinants to the next consinants
+    name= "bill randal"
+       name_array= name.split(' ')#gets it into an array
+
+        last_name = name_array.pop#grabs last name
+        first_name =name_array.first#graps first name
+
+ new_name = last_name+ " " +first_name #new string with last,firt name
+
+#for any vowels, iterate to the next vowel in the list (aeiou)
+iterator= new_name.split('')
+i = 0
+while i<iterator.length
+  for each 
+#vowels = ["a", "e", "i", "o", "u"]
+
+#probably need something iterate through each letter, while i<new_name.length
+#if aeiou, replace with the next vowel in the vowel array, .next
