@@ -11,11 +11,41 @@
  new_name = last_name+ " " +first_name #new string with last,firt name
 
 #for any vowels, iterate to the next vowel in the list (aeiou)
+
+
 iterator= new_name.split('')
 i = 0
-while i<iterator.length
-  for each 
-#vowels = ["a", "e", "i", "o", "u"]
+iterator[i]#iterates through each letter
+#if iterator[i]==vowels
+#  p iterator[i].next
+#else
+#  iterator[i]
+#end
+while i<new_name.length
+  vowel = ["a", "e", "i", "o", "u"]
+  if new_name[i].include?("a")
+ new_name[i]= vowel[vowel.index(new_name[i])+1]
+ i+=1
+  elsif new_name[i].include?("e")
+ new_name[i]= vowel[vowel.index(new_name[i])+1]
+ i+=1
+  elsif new_name[i].include?("i")
+ new_name[i]= vowel[vowel.index(new_name[i])+1]
+ i+=1
+    elsif new_name[i].include?("o")
+ new_name[i]= vowel[vowel.index(new_name[i])+1]
+ i+=1
+     elsif new_name[i].include?("u")
+ new_name[i]= vowel[vowel.index(new_name[i])+1]
+ i+=1
+ else
+
+   new_name[i]
+i+=1
+p new_name
+end
+end
+
 
 #probably need something iterate through each letter, while i<new_name.length
 #if aeiou, replace with the next vowel in the vowel array, .next
