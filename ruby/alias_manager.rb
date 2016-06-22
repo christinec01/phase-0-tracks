@@ -15,37 +15,29 @@
 
 iterator= new_name.split('')
 i = 0
+
 iterator[i]#iterates through each letter
 #if iterator[i]==vowels
 #  p iterator[i].next
 #else
 #  iterator[i]
 #end
+p new_name
 while i<new_name.length
-  vowel = ["a", "e", "i", "o", "u"]
-  if new_name[i].include?("a")
- new_name[i]= vowel[vowel.index(new_name[i])+1]
- i+=1
-  elsif new_name[i].include?("e")
- new_name[i]= vowel[vowel.index(new_name[i])+1]
- i+=1
-  elsif new_name[i].include?("i")
- new_name[i]= vowel[vowel.index(new_name[i])+1]
- i+=1
-    elsif new_name[i].include?("o")
- new_name[i]= vowel[vowel.index(new_name[i])+1]
- i+=1
-     elsif new_name[i].include?("u")
- new_name[i]= vowel[vowel.index(new_name[i])+1]
- i+=1
- else
+  vowel = "aeiou"
 
-   new_name[i]
-i+=1
+    if vowel.include?(new_name[i])
+        new_name[i]= vowel[vowel.index(new_name[i])+1]
+        i+=1
+      else
+
+        new_name[i]=new_name[new_name.index(new_name[i])+1]
+        i+=1
+
+    end
+
 p new_name
 end
-end
-
 
 #probably need something iterate through each letter, while i<new_name.length
 #if aeiou, replace with the next vowel in the vowel array, .next
