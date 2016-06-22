@@ -1,43 +1,68 @@
 
-  #swap first and last name
+agents={} #creating a hash to store agent name and alias info
+
+
+  puts "Please enter your name so we can generate your alias:"
+
+#wrap this all in a method
+#swap first and last name
   #change all of the vowels to the next vowel in (aeiou)
   #change all the consinants to the next consinants
-    name= "bill randal"
+
+  		agents[:name] = gets.chomp.downcase
+  		name = agents[:name]
+
        name_array= name.split(' ')#gets it into an array
 
-        last_name = name_array.pop#grabs last name
+        last_name = name_array.last#grabs last name
         first_name =name_array.first#graps first name
 
- new_name = last_name+ " " +first_name #new string with last,firt name
+
+ #new_name = last_name+ first_name #new string with last,firt name
 
 #for any vowels, iterate to the next vowel in the list (aeiou)
 
-
-iterator= new_name.split('')
+iterator= last_name.split("")
 i = 0
 
-iterator[i]#iterates through each letter
+#iterates through each letter
 #if iterator[i]==vowels
 #  p iterator[i].next
 #else
 #  iterator[i]
 #end
-p new_name
-while i<new_name.length
-  vowel = "aeiou"
+  consinants = "bcdfghjklmnpqrstvwxyzb"
+  vowel = "aeioua"
 
-    if vowel.include?(new_name[i])
-        new_name[i]= vowel[vowel.index(new_name[i])+1]
+while i<last_name.length
+	if vowel.include?(last_name[i])
+        last_name[i]= vowel[vowel.index(last_name[i])+1]
         i+=1
-      else
-
-        new_name[i]=new_name[new_name.index(new_name[i])+1]
+      elsif
+         last_name[i]= consinants[consinants.index(last_name[i])+1]
         i+=1
 
+else
+  last_name[i]
+  i+=1
     end
 
-p new_name
+ last_name
 end
+i = 0
+while i< first_name.length
+ if vowel.include?(first_name[i])
+	first_name[i] = vowel[vowel.index(first_name[i])+1]
+	i +=1
+	elsif
+	first_name[i] = consinants[consinants.index(first_name[i])+1]
+	i +=1
 
-#probably need something iterate through each letter, while i<new_name.length
-#if aeiou, replace with the next vowel in the vowel array, .next
+else
+	first_name[i]
+end
+ first_name
+end
+puts "Thank you! your alias is:"
+p last_name+ " "+ first_name
+p agents
