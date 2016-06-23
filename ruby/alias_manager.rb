@@ -1,25 +1,22 @@
-
-agents={} #creating a hash to store agent name and alias info
-
-
+def alias_name()
   puts "Please enter your name so we can generate your alias:"
+#name = gets.chomp
+h = {}
 
 #wrap this all in a method
 #swap first and last name
   #change all of the vowels to the next vowel in (aeiou)
   #change all the consinants to the next consinants
 
-  		agents[:name] = gets.chomp.downcase
-  		name = agents[:name]
+  	p	h[:name] = gets.chomp.downcase
+  	name = h[:name]
 
        name_array= name.split(' ')#gets it into an array
 
         last_name = name_array.last#grabs last name
         first_name =name_array.first#graps first name
 
-
  #new_name = last_name+ first_name #new string with last,firt name
-
 #for any vowels, iterate to the next vowel in the list (aeiou)
 
 iterator= last_name.split("")
@@ -63,6 +60,16 @@ else
 end
  first_name
 end
+new_name = last_name+ " "+ first_name
 puts "Thank you! your alias is:"
-p last_name+ " "+ first_name
-p agents
+p new_name
+ 
+puts "Would you like to enter another name?(y/n)"
+response = gets.chomp
+if response == "y"
+   alias_name
+end
+
+p h.each {|name, alias_name| puts "Your name is #{alias_name} and your alias is #{new_name}"}
+end
+alias_name
