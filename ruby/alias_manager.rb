@@ -8,7 +8,7 @@ h = {}
   #change all of the vowels to the next vowel in (aeiou)
   #change all the consinants to the next consinants
 
-  	p	h[:name] = gets.chomp.downcase
+  		h[:name] = gets.chomp.downcase
   	name = h[:name]
 
        name_array= name.split(' ')#gets it into an array
@@ -63,7 +63,7 @@ end
 new_name = last_name+ " "+ first_name
 puts "Thank you! your alias is:"
 p new_name
- 
+
 puts "Would you like to enter another name?(y/n)"
 response = gets.chomp
 if response == "y"
@@ -72,4 +72,5 @@ end
 
 p h.each {|name, alias_name| puts "Your name is #{alias_name} and your alias is #{new_name}"}
 end
+
 alias_name
