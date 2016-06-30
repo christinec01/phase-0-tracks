@@ -33,3 +33,31 @@ puppy1.speak(3)
 puppy1.roll_over
 puppy1.dog_years(3)
 puppy1.play_dead
+
+
+class Juggler
+
+  def initialize
+    puts "Initializing new juggler.."
+    puts "======================="
+  end
+
+  def toss(ball_num)
+    puts "Juggling #{ball_num} balls!"
+    puts "======================="
+  end
+
+  def colors(ball_color)
+    puts "The ball is #{ball_color}"
+    puts "======================="
+  end
+
+end
+
+juggler_arr = []
+50.times {juggler_arr<< Juggler.new}#loop that makes 50 instances
+
+juggler_arr.each do |juggler|
+  juggler.toss(3)
+  juggler.colors("red")
+end
