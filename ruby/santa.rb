@@ -6,17 +6,20 @@ end
   def initialize(gender, example_ethnicity)
     @example_ethnicity = example_ethnicity
     @agender = gender
+
+
   puts "Initializing Santa instance..."
 end
-def suit_color(suit_color)
+def suit_color()
+  puts "#{@example_ethnicity} Santa has a #{@suit_color} coat on!"
     @suit_color = suit_color
-    puts "Generating the color-ator..."
 end
 def speak
-  puts "#{@example_ethnicity} Santa says: ho ho ho!"
+  puts "#{@example_ethnicity} Santa says: ho ho ho! Haaaaapy hollidays!"
   puts "======================"
 
 end
+
 
 def reindeer_ranking
   reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Pranceer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -26,11 +29,9 @@ def age
 end
  end
  example_ethnicities = ["caucasian", "european", "middle eastern", "pacific islander", "hispanic"]
- suit_colors = ["red", "mahogany", "yellow", "blue", "beige"]
  gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-
+ suit_color = ["red", "mahogany", "yellow", "blue", "beige"]
 santa = []
-
 # p santa << Santa.new("agender", "black")
 # p santa << Santa.new("female", "Latino")
 # p santa << Santa.new("bigender", "white")
@@ -41,14 +42,9 @@ santa = []
 
 
  example_ethnicities.each do |example_ethnicity|
- santa << Santa.new(example_ethnicity)
+ santa << Santa.new(gender, example_ethnicity)
    p "This Santa is #{example_ethnicity}!"
   puts "=========================="
-end
-suit_colors.each do |suit_color|
-  santa << Santa.new(suit_color)
-  p "This santa has on a #{suit_color} suit"
-  puts "==========================="
 end
 
 puts "There are now #{santa.length} Santas!"
@@ -57,14 +53,9 @@ santa.each do |santa|
   santa.speak
 end
 example_ethnicities.each do |example_ethnicity|
-  santa << Santa.new(example_ethnicity)
+  santa << Santa.new(gender, example_ethnicity)
   p "This Santa is #{example_ethnicity}!"
   puts "=========================="
-end
-suit_colors.each do |suit_color|
-  santa << Santa.new(suit_color)
-  p "This santa has on a #{suit_color} suit"
-  puts "==========================="
 end
 
 puts "There are now #{santa.length} Santas!"
