@@ -19,7 +19,9 @@ class Santa # create a santa class
   def age
     @age
   end
-
+  def ethnicity
+    @example_ethnicity
+  end
   def set_age(age)
 
     @age = age
@@ -32,13 +34,16 @@ class Santa # create a santa class
   def gender
     @gender
   end
+  def gender_set(gender)
+    @gender = gender
+  end
 
   def get_mad_at(ranking)
     ranking.rotate(1)
   end
 end
 
-reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+reindeer_ranking = ['Rudolph', 'Dasher', 'Dancer', 'Prancer', 'Vixen', 'Comet', 'Cupid', 'Donner', 'Blitzen']
 example_ethnicities = ['caucasian', 'european', 'middle eastern', 'pacific islander', 'hispanic']
 gender = ['agender', 'female', 'bigender', 'male', 'female', 'gender fluid', 'N/A']
 suit_color = %w(red mahogany yellow blue beige)
@@ -77,6 +82,10 @@ p santas[2].age
 santas[2].set_age(50)
 p santas[2].age
 p santas[2].get_mad_at(reindeer_ranking)
+p santas[2].gender
+santas[2].gender_set("female")
+p santas[2].gender
+p santas[2].ethnicity
 
 # gender.length.times do |i|
 #   santas << Santa.new(gender[i], example_ethnicities[i])
