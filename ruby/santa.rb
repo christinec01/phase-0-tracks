@@ -1,70 +1,84 @@
-class Santa
+class Santa # create a santa class
   def eat_milk_and_cookies(cookie)
+    puts "that was a good #{cookie} cookie!!"
+  end
 
-  puts "that was a good #{cookie} cookie!!"
-end
   def initialize(gender, example_ethnicity)
     @example_ethnicity = example_ethnicity
-    @agender = gender
+    @gender = gender
+    @age = 0
+    # puts 'Initializing Santa instance...'
+  end
 
+  def speak
+    puts "#{@gender} #{@example_ethnicity} Santa says: ho ho ho!
+    Haaaaapy hollidays!"
+    puts '======================'
+  end
 
-  puts "Initializing Santa instance..."
+  def age
+    @age
+  end
+
+  def set_age(age)
+
+    @age = age
+  end
+
+  def celebrate_birthday
+    @age = @age + 1
+  end
+
+  def gender
+    @gender
+  end
+
+  def get_mad_at(ranking)
+    ranking.rotate(1)
+  end
 end
-def suit_color()
-  puts "#{@example_ethnicity} Santa has a #{@suit_color} coat on!"
-    @suit_color = suit_color
-end
-def speak
-  puts "#{@example_ethnicity} Santa says: ho ho ho! Haaaaapy hollidays!"
-  puts "======================"
 
-end
+reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+example_ethnicities = ['caucasian', 'european', 'middle eastern', 'pacific islander', 'hispanic']
+gender = ['agender', 'female', 'bigender', 'male', 'female', 'gender fluid', 'N/A']
+suit_color = %w(red mahogany yellow blue beige)
+santas = []
+# santas << Santa.new('agender', 'black')
+# santas << Santa.new('female', 'Latino')
+# santas << Santa.new('bigender', 'white')
+# santas << Santa.new('male', 'Japanese')
+# santas << Santa.new('female', 'prefer not to say')
+# santas << Santa.new('gender fluid', 'Mystical Creature(Unicorn)')
+# santas << Santa.new('NA', 'NA')
 
-
-def reindeer_ranking
-  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Pranceer", "Vixen", "Comet", "Cupid", "Donner"]
+example_ethnicities.length.times do |i|
+  santas << Santa.new(gender[i], example_ethnicities[i])
 end
-def age
-  age = 0
-  puts "This santa is #{age} years old"
-end
- end
- example_ethnicities = ["caucasian", "european", "middle eastern", "pacific islander", "hispanic"]
- gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
- suit_color = ["red", "mahogany", "yellow", "blue", "beige"]
-santa = []
-p santa << Santa.new("agender", "black")
-p santa << Santa.new("female", "Latino")
-p santa << Santa.new("bigender", "white")
-p santa << Santa.new("male", "Japanese")
-p santa << Santa.new("female", "prefer not to say")
-p santa << Santa.new("gender fluid", "Mystical Creature(Unicorn)")
-p santa << Santa.new("NA", "NA")
-
-
- example_ethnicities.length.times do |i|
- santa << Santa.new(gender[i], example_ethnicities[i])
-end
-# santa.length do |santa|
-# puts "There are now #{santa.length} Santas!"
+# santas.length do |santas|
+# puts "There are now #{santas.length} Santas!"
 # puts "the santas can speak..."
 #
-#   santa.speak
+#   santas.speak
 # end
 # example_ethnicities.each do |example_ethnicity|
-#   santa << Santa.new(gender, example_ethnicity)
+#   santas << Santa.new(gender, example_ethnicity)
 #   p "This Santa is #{example_ethnicity}!"
 #   puts "=========================="
 # end
 
-puts "There are now #{santa.length} Santas!"
-puts "the santas can speak..."
-santa.each do |santa|
-  santa.speak
-  santa.age
-end
+puts "There are now #{santas.length} Santas!"
+puts 'the santas can speak...'
+# santas.each do |santa|
+#   santa.speak
+#   p santa.age
+# end
 
-gender.length.times do |i|
-  santa<< Santa.new(gender[i], example_ethnicities[i])
-  puts "This santa is #{gender[i]}"
-end
+p santas[2].age
+santas[2].set_age(50)
+p santas[2].age
+p santas[2].get_mad_at(reindeer_ranking)
+
+# gender.length.times do |i|
+#   santas << Santa.new(gender[i], example_ethnicities[i])
+#   puts "This santas is #{gender[i]}"
+# end
