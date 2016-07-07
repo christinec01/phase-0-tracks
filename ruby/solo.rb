@@ -12,32 +12,62 @@ class Magical_Unicorn # Magical unicorns class
     puts "#{@horn_color}-horned Unicorn is now ~*~*SPARKLY*~*~"#makes the unicorn sparkly
   end
   #speak method
-  def speak(string)#makes the unicorn say "hello! I'm a magical unicorn!"
-    @speak = string
-    puts "#{@horn_color} unicorn says: #{@speak}!"
+  def speak#makes the unicorn say "hello! I'm a magical unicorn!"
+    puts "#{@horn_color} unicorn says hello! I'm a magical unicorn!"
   end
-  def color_ator(color)#color-ator method
-    @color_ator = color
-    puts "This unicorn's horn color was #{@horn_color}, now its #{@color_ator}!"#has the unicorn state its horn color, then change it to a new color
+  def space
+    puts "#{@horn_color} unicorn is #{@age} and is a #{@gender}!"
   end
-end
-# unicorn_1 = Magical_Unicorn.new(12,"red", "female")
-# p unicorn_1.age
-# unicorn_1.horn_color = 'Blue'
-# p unicorn_1.horn_color
-# unicorn_1.speak("hi")
-# unicorn_1.color_ator("yellow")
-unicorns = [] #creating an empty unicorns array to store these magical creatures
-puts "Hello! Would you like to create some unicorns?!(y/n)"
-  more_unicorns = "y"
-  unicorns_desired = gets.chomp
-      while unicorns_desired == more_unicorns
-      puts "Great! What color horn would you like it to have?"
+  def horn_colors
+    puts "Great! What color horn would you like it to have?"
       @horn_color = gets.chomp
-      puts "what gender unicorn would you like? Female, Male, or Sparklehorse?"
+    puts "You now how have a #{@gender} unicorn with a #{@horn_color} horn."
+    end
+    def unicorn_gender
+      puts "What gender unicorn would you like?? female, male shimmery...anything you'd like!"
       @gender = gets.chomp
-      unicorns << Magical_Unicorn.new(@age,@horn_color, @gender)
-      puts "Would you like to make another unicorn?"
+    end
+end
+  unicorns = [] #creating an empty unicorns array to store these magical creatures
+
+  puts "Hello! Would you like to create some unicorns?!(y/n)"
+      more_unicorns = "y"
       unicorns_desired = gets.chomp
+
+  while unicorns_desired == more_unicorns
+    unicorn = Magical_Unicorn.new(@age,@horn_color, @gender)
+    unicorns << unicorn
+      unicorn.unicorn_gender #prompts user to assign a gender
+      unicorn.horn_colors #prompts user to assign a horn color
+    puts "Would you like to make another unicorn?"
+      unicorns_desired = gets.chomp
+  end
+
+    puts "Would you like to make these unicorns sparkle?"
+        sparkle = gets.chomp
+      if sparkle == "y"
+        unicorns.each do |unicorn|
+        unicorn.sparkle
       end
-      p unicorns
+    end
+    puts "Would you like to change a unicorn's horn color?"
+        horn = gets.chomp
+        if horn == "y"
+          puts "which unicorn would you like to change? Please enter its index number."
+            changing_unicorn = gets.chomp.to_i
+          unicorns[changing_unicorn].horn_colors
+        end
+    puts "Would you like the unicorns to speak?"
+      words = gets.chomp
+      if words == "y"
+        unicorns.each do |unicorn|
+          unicorn.speak
+        end
+      end
+  puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  puts ""
+  puts "Here are your beautiful unicorns!"
+  puts ""
+   unicorns.each do |unicorn|
+    unicorn.space
+end
