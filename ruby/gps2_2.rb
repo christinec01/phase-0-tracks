@@ -33,10 +33,12 @@ end
 
 # create_listi\
 list = []
-add_item_to(list, "apples", 1)
-add_item_to(list, "bananas", 4)
-add_item_to(list, "mango", 5)
-add_item_to(list, "cereal", 4)
-add_item_to(list, "bananas", 4)
-add_item_to(list, "bananas", 4)
+add_item_to(list, "lemonade", 2)
+add_item_to(list, "tomatoes", 3)
+add_item_to(list, "onions", 1)
+add_item_to(list, "ice cream", 4)
+#p list
+remove_item_from(list, {:item => "lemonade", :quantity => 2})
+#p list
+update_quantity(list, 2, 1)
 run_list(list)
