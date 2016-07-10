@@ -1,0 +1,21 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+A class is a special object that has attributes which an be shared with its 'children' - or instances of that class.
+state- defines the attributes of instances
+behavior- what the class does
+instance variable- a variable that only exists inside
+instance method- a method which is only accessible from within the class
+
+2. What are attributes?
+Attributes are the things that make up the class
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+A coffee object might have roast and body attributes which each instance of the coffee class would inherit
+
+4. What is the purpose of the initialize method? When does it run?
+The initialize method creates new instances of the class. It runs when you want to create a new instance of a class.
+
+5. What are modules?
+Modules are collections of methods and symbols. A module can inherit instance methods from a class and/or have methods of their own.
+
+6. What are the different ways you can use a module?
+If you have several different classes of things that you want to give one or several of the same methods to you could use a module. 
