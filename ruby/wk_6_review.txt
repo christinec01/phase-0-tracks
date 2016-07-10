@@ -14,8 +14,8 @@ A coffee object might have roast and body attributes which each instance of the 
 4. What is the purpose of the initialize method? When does it run?
 The initialize method creates new instances of the class. It runs when you want to create a new instance of a class.
 
-5. What are modules?
+5. What are modules? 
 Modules are collections of methods and symbols. A module can inherit instance methods from a class and/or have methods of their own.
 
 6. What are the different ways you can use a module?
-If you have several different classes of things that you want to give one or several of the same methods to you could use a module. 
+If you have several different classes of things that you want to give one or several of the same methods to you could use a module.
