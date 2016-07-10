@@ -39,7 +39,7 @@ santas = []
 # santas << Santa.new('gender fluid', 'Mystical Creature(Unicorn)')
 # santas << Santa.new('NA', 'NA')
 
-20.times do |i|
+200.times do |i|
   santas << Santa.new(gender[rand(0..7)], example_ethnicities[rand(0..7)])
 end
 puts "There are now #{santas.length} Santas!"
