@@ -54,8 +54,9 @@ class Juggler
 
 end
 
-juggler_arr = []
-50.times {juggler_arr<< Juggler.new}#loop that makes 50 instances
+  juggler_arr = []
+
+  50.times {juggler_arr<< Juggler.new}#loop that makes 50 instances
 
 juggler_arr.each do |juggler|
   juggler.toss(3)
