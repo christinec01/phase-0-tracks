@@ -57,15 +57,8 @@ result =
 
 	else
 		p "Results inconclusive"
-<<<<<<< .merge_file_pZhi7V
-	end]
-=======
-	end
-	]
+end
 
-
-
->>>>>>> .merge_file_0hpQGx
 employees.each_with_index do |result, index|
   puts "Candidate #{index} is #{result}!"
   i+=1
