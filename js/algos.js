@@ -30,9 +30,27 @@ function keyValue(obj1, obj2){
   }
   return false;
 }
-
+//test code
 obj1 = {name: "Steven", age: 54}
 obj3 = {name: "Steven", age: 54}
 
 obj2 = {name: "Tamir", age: 54}
 console.log(keyValue(obj1, obj2))
+
+// Release 2
+//write a function that takes an integer
+function integerTaker(integer){
+  var stringArray = []
+  for (var i = 0; i < integer; i++){
+    var ranLength = Math.floor(Math.random()*10)
+    var ranString = ""
+    for (var u = 0; u < ranLength; u++){
+      ranString += 'h'
+
+    }
+    stringArray.push(ranString)
+  }
+//generate strings of random lengths 'ineger'number of times
+return stringArray
+}
+console.log (integerTaker(3))
