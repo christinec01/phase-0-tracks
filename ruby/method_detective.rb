@@ -5,7 +5,7 @@
 # committed the crime, add additional calls to prove it.
 
 puts "iNvEsTiGaTiOn".swapcase
-#=> “InVeStIgAtIoN”
+# => “InVeStIgAtIoN”
 
  puts "zom".gsub "o", "oo"
 # => “zoom”
