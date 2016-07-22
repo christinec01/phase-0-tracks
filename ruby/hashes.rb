@@ -1,11 +1,5 @@
 client = {}#create a hash to store key value pairs
-client = {client_name:nil,
-   client_age: nil,
-   has_kids: nil,
-   design_theme: nil,
- }
- #add keys : client_name, client_age, has_kids, design_theme, city
-
+#add keys and collect values from user input
 puts "what is your name?"
 client[:client_name]  = gets.chomp
 puts client[:client_name]
@@ -22,7 +16,7 @@ puts "Do you have kids?(y/n)"
 client[:has_kids] = gets.chomp
 
   puts client[:has_kids]
-end
+
 puts "..........................................................."
 
 
@@ -33,12 +27,13 @@ puts client[:design_theme]
 puts "..........................................................."
 puts "..........................................................."
 
-#display results for user.
+#display results in a user-friendly way.
 puts "Great! Thank you for providing this information. Just to make sure we have all of the correct information, please reivew:"
 puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-puts client
-
-#give user an opportunity to update a key value entery
+ client.each do |key,value|
+  puts "#{key}: #{value}"
+end
+#give user an opportunity to update a key value enteries
 #if they do not need to update anything, prompt them to enter "none"
 
 puts "Would you like to update any of your enteries?
@@ -62,11 +57,12 @@ elsif answer == "design theme"
   client[:design_theme] = gets.chomp
 
 elsif answer == "nope"
-  puts client
-
+  puts "Great! Then we're all done here.
+  Here is your data:"
+  client.each do |key,value|
+    puts "#{key}: #{value}"
+  end
 else
   puts "I'm sorry, thats not a valid entery.."
 
-
-puts client
 end
