@@ -40,3 +40,4 @@ puts "z".ord
 a = "How many times does the letter 'a' appear in this string?"
 puts a.count("a")
 # => 4
+#adding Tyler in comments
