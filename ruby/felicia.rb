@@ -3,6 +3,7 @@
 #2.Changing all the vowels to the next vowel in (aeiou)
 #3.Changing all the consenants to the next consenant
 
+
 def name_swapper(full_name)
   full_name = full_name.downcase
   vowel_array = ['a','e','i','o','u']
@@ -20,7 +21,20 @@ def name_swapper(full_name)
 
   end
   puts "Your name USED to be #{full_name.upcase}...but now your name is #{secret_name.join.upcase}!"
+  secret_name.join.upcase
 end
-puts "Hello! What name would you like to create an alias for?"
-full_name = gets.chomp
-puts name_swapper(full_name)
+
+
+name_hash = {}
+# when is your condition false?
+more_names = "y"
+while more_names == "y" do
+  puts "What name would you like to create an alias for?"
+  full_name = gets.chomp
+  # name_swapper(full_name)
+  name_hash[full_name] = name_swapper(full_name)
+  puts "Would you like to create an alias?"
+  more_names = gets.chomp
+end
+p name_hash
+# what is your output after the loop?
