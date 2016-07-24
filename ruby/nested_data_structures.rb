@@ -13,7 +13,5 @@ def furnish_house(hash, key, furniture_to_add)
    puts "The #{key} now has a #{furniture_to_add}."
 end
 
-
-
 puts big_letters(house,'Bedroom', 1)
 puts furnish_house(house, 'Living_room', "tv")
