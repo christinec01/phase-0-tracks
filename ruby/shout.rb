@@ -16,8 +16,15 @@ module Shout
     puts "I'm just SOO angry!"
   end
 end
+
+module Talk
+  def Greeting
+    puts "hello there!"
+  end
+end
 class Person
   include Shout
+  include Talk
 end
 class Instructor
   puts "I'm an instructor."
@@ -26,6 +33,6 @@ end
 person = Person.new
 person.happy
 person.angry
-
+person.Gsreeting
 instructor = Instructor.new
 instructor.happy
