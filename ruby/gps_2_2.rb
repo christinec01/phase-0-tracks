@@ -76,8 +76,10 @@ end
 # output: none
 def print_list(grocery_list)
 puts "Your list is as follows:"
-grocery_list.each do |item|
-  p grocery_list["#{item}"]
+grocery_list.each do |key, value|
+   puts "Item: #{key}
+   Quantity: #{value}
+   =================="
 end
 
 end
