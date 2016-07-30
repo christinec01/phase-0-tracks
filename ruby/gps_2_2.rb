@@ -40,10 +40,6 @@ def add_item(grocery_list, item)
   grocery_list
 end
 
-my_list =  create_list("carrots apples apples")
-my_list = add_item(my_list, "pear")
-
-p my_list
 # Method to remove an item from the list
 # input:
   #A String represents the item to be removed from the hash
@@ -52,8 +48,10 @@ p my_list
  # call the print hash method (defined below)
 # output:
   # hash
-
-
+  def remove_item(grocery_list,item)
+    grocery_list.delete(item)
+    grocery_list
+  end
 # Method to update the quantity of an item
 # input:
   #establish the parameters (bananas, 2)
@@ -63,7 +61,10 @@ p my_list
 # call the print hash method (defined below)
 # output:
   # hash
-
+  def quantity_update(grocery_list,item,quantity)
+    grocery_list[item]= quantity
+    grocery_list
+end
 
 # Method to print a list and make it look pretty
 # input:
@@ -73,9 +74,33 @@ p my_list
   #print "#{key}: + #{value}" for each key and value
   #"#
 # output: none
+def print_list(grocery_list)
+puts "Your list is as follows:"
+grocery_list.each do |item|
+  p grocery_list["#{item}"]
+end
 
+end
 
-
+#driver code
+puts "testing the create list method"
+my_list =  create_list("carrots apples apples")
+p my_list
+puts
+puts "testing the add item method"
+my_list = add_item(my_list, "pear")
+p my_list
+puts
+puts "testing the remove item method"
+my_list = remove_item(my_list, "carrots")
+p my_list
+puts
+puts "testing the update quantity method"
+my_list = quantity_update(my_list, "apples", 3)
+p my_list
+puts
+puts "testing print list method"
+my_list = print_list(my_list)
 
 
 # hash = {
