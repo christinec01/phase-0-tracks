@@ -9,10 +9,10 @@ describe Game do
   it "updates the user_guess array when a correct letter is guessed" do
     expect(game.check_letter_in_secret_word_and_user_guess("h")).to eq ["h","-","-","-","-"]
   end
-  it " gives feedback to the user if a correct letter is guessed" do
+  it "gives feedback to the user if a correct letter is guessed" do
     expect(game.handle_guesses("h")).to eq ["h","-","-","-","-"]
   end
-  it " tells you you've won" do
+  it "tells you you've won" do
     expect(game.you_win).to eq "you've won: -----"
   end
   it "finds index value for all incidences of a word" do
