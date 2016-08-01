@@ -1,9 +1,6 @@
 require_relative 'game.rb'
 describe Game do
   let(:game){Game.new("hello")}
-  # it "lets user one enter a word/phrase" do
-  #   expect(game.secret_phrase("phrase")).to eq "phrase"
-  # end
 
   it "creates a new user array with dashes who's length is the length of the secret_phrase" do
     expect(game.make_blank_user_array("hello")).to eq ["-","-","-","-","-"]
