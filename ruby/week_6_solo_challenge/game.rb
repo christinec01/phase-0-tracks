@@ -65,7 +65,7 @@ p game.handle_guesses(user_guess)
 user_guess = "e"
 p game.handle_guesses(user_guess)
 
-puts "=======you've won test case==========="
+puts "======= you've won test case==========="
 p game = Game.new("pen")
 user_guess= "e"
 p game.handle_guesses(user_guess)
