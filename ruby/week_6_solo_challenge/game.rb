@@ -74,7 +74,7 @@ p game.handle_guesses(user_guess)
 user_guess = "p"
 p game.handle_guesses(user_guess)
 
-puts "=======you lose test case==========="
+puts " =======you lose test case==========="
 
 p game = Game.new("pen")
 user_guess= "o"
