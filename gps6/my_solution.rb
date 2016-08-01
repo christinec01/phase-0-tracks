@@ -73,7 +73,6 @@ STATE_DATA.each do |state, pop_info|
 
   current_state = VirusPredictor.new(state, pop_info[:population_density], pop_info[:population])
   current_state.virus_effects
-
 end
 
 sample_array = [1, 2, 3, 4]
