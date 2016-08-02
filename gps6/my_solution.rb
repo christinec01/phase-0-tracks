@@ -1,5 +1,5 @@
 class VirusPredictor
-
+  require_relative 'data_structor.rb'
   # Create any new instance of VirusPredictor with three arguments that become attributes:
   # state, population, and population density.
   def initialize(state_of_origin, population_density, population)
