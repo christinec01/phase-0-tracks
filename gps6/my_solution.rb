@@ -8,18 +8,18 @@ class VirusPredictor
     @population_density = population_density
   end
 
+
   #predicts the effects and speed of spread of a virus on an instance of virus predictor using population densitity, population, and state
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
-  private
-
+private
   # Takes population density, population and state parameters and depending on their values,
   # performs a calculation and returns a death total based on how the population and population
   # density relate to eachother.
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -38,7 +38,7 @@ class VirusPredictor
   end
 
   #takes population densisty and state and runs logit to return a rate of speed of virus spread.
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -68,17 +68,9 @@ end
 
 STATE_DATA.each do |state, pop_info|
 
-  # p state
-  p pop_info[:population_density]
-
   current_state = VirusPredictor.new(state, pop_info[:population_density], pop_info[:population])
   current_state.virus_effects
 end
-
-sample_array = [1, 2, 3, 4]
-sample_hash = {1 => 2, 3 => 4}
-
-
 
 
 #great
@@ -100,3 +92,14 @@ sample_hash = {1 => 2, 3 => 4}
 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  #rocket and colon- colon can only be symbols whereas rocket can be symbols, string or integers
+# What does require_relative do? How is it different from require?
+  #require_relative allows you to accesss a file located in the same directory
+# What are some ways to iterate through a hash?
+  #.each, .map
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  #the method was taking instance variables as arguments which was unncessary since the class already
+  #has access to them.
+# What concept did you most solidify in this challenge?
+  # scope!!
