@@ -27,3 +27,10 @@ car.honk();
 var newCar = new Car("Blue", "truck");
 console.log(newCar);
 newCar.honk();
+
+for (var key in car){
+  console.log(car[key]);
+}
+for (var key in car){
+  console.log(key);
+}
