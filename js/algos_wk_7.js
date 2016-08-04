@@ -17,30 +17,42 @@ for (var key in keyValuePairOne) {
 return false
 }
 
-function randomString (integer){
-  newArray = []
-  randStr = ""
-  alphArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-  for (var i = 0; i < integer; i ++){
-    var indexer= Math.floor((Math.random()*26)+1)
-    Math.floor()*indexer
-    randLetter = alphArray[Math.floor((Math.random()*26)+1)]
-    randStr = randStr.concat(randLetter)
-    newArray.push(randStr);
-    
+// console.log(randomString(10))
+// console.log(longestPhrase(phraseArray))
+// console.log(keyValue(keyValuePairOne,keyValuePairTwo))
 
+function generateNumberOfStrings(number) {
+  // Make number of strings of random length
+  var arrayOfStrings = [];
+  for(var i = 0; i < number; i++){
+    arrayOfStrings.push(generateRandomString());
   }
-return newArray
+  // return array of strings
+  return arrayOfStrings;
 }
 
+function generateRandomString() {
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var randomString = "";
+  var randomLength = generateRandomNumber(10);
+  for (var i = 0; i<randomLength; i++){
+    var randomLetterIndex = generateRandomNumber(26);
+    var randomLetter = alphabet[randomLetterIndex];
+    randomString = randomString.concat(randomLetter)
+  }
 
-//Driver code
-var keyValuePairOne={name: "Steven", age: 54}
-var keyValuePairTwo = {name: "Tamir", age: 54}
-// var keyValuePairTwo = {name: "David", age: 4} testing no matches
-// var keyValuePairTwo = {name: "Tamir", age: 5} testing matching name
-var phraseArray = ["long phrase","longest phrase","longer phrase"]
+  return randomString;
+}
 
-console.log(randomString(3))
-console.log(longestPhrase(phraseArray))
-console.log(keyValue(keyValuePairOne,keyValuePairTwo))
+function generateRandomNumber(n) {
+  return Math.floor(Math.random()*n)
+}
+console.log(generateRandomString());
+console.log(generateNumberOfStrings(3))
+console.log("release two question two");
+for (var i = 0; i<10; i++){
+  var myArray = generateNumberOfStrings(i)
+  console.log(myArray);
+  var myLongPhrase = longestPhrase(myArray);
+  console.log(myLongPhrase);
+}
