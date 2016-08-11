@@ -1,0 +1,31 @@
+Coffee table
+sqlite> select * from coffee_attributes;
+id          name             roast        region_id
+----------  ---------------  -----------  ----------
+1           Breakfast Blend  light roast  1
+2           Veranda          light roast  1
+3           Italian          dark roast   3
+4           Kenya            medium roas  2
+
+Regions table
+sqlite> select * from regions;
+id          name
+----------  ----------
+1           LatAm
+2           african
+3           asian/paci
+
+CROSS JOIN
+input:sqlite> select roast from coffee_attributes cross join regions;
+output:
+light roast
+light roast
+light roast
+light roast
+light roast
+light roast
+dark roast
+dark roast
+dark roast
+medium roast
+medium roast
