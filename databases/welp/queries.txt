@@ -1,0 +1,42 @@
+sqlite> select * from review, users where business_id = 1;
+id          stars       comment     business_id  user_id     id          firstname   lastname
+----------  ----------  ----------  -----------  ----------  ----------  ----------  ----------
+2           3           it was OK   1            2           1           Bradford    Pitt
+2           3           it was OK   1            2           2           Mandy       Kaling
+2           3           it was OK   1            2           3           Angela      Jolie
+2           3           it was OK   1            2           4           Holly       Berry
+2           3           it was OK   1            2           5           Merry       Steepman
+2           3           it was OK   1            2           6           Denzel      George
+
+sqlite> select * from review, users where stars = 5;
+id          stars       comment                        business_id  user_id     id          firstname   lastname
+----------  ----------  -----------------------------  -----------  ----------  ----------  ----------  ----------
+3           5           we're definitely coming back!  5            4           1           Bradford    Pitt
+3           5           we're definitely coming back!  5            4           2           Mandy       Kaling
+3           5           we're definitely coming back!  5            4           3           Angela      Jolie
+3           5           we're definitely coming back!  5            4           4           Holly       Berry
+3           5           we're definitely coming back!  5            4           5           Merry       Steepman
+3           5           we're definitely coming back!  5            4           6           Denzel      George
+sqlite>
+
+sqlite> select name, business_id from business, review where stars = 4;
+name                          business_id
+----------------------------  -----------
+Grundy Hollow Wedding Chapel  3
+Amir's Towing                 3
+The Beagle Nightclub          3
+Lotus Yoga                    3
+Plumbing by Janet             3
+Sushi World                   3
+JoeBob's Sportz Barn          3
+sqlite> select name, business_id from business, review where user_id = 3;
+name                          business_id
+----------------------------  -----------
+Grundy Hollow Wedding Chapel  2
+Amir's Towing                 2
+The Beagle Nightclub          2
+Lotus Yoga                    2
+Plumbing by Janet             2
+Sushi World                   2
+JoeBob's Sportz Barn          2
+sqlite>
