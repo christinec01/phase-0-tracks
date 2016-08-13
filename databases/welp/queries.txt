@@ -39,4 +39,49 @@ Lotus Yoga                    2
 Plumbing by Janet             2
 Sushi World                   2
 JoeBob's Sportz Barn          2
-sqlite>
+
+User
+id          firstname   lastname
+----------  ----------  ----------
+1           Bradford    Pitt
+2           Mandy       Kaling
+3           Angela      Jolie
+4           Holly       Berry
+5           Merry       Steepman
+6           Denzel      George
+
+Business
+id          name
+----------  ----------------------------
+1           Grundy Hollow Wedding Chapel
+2           Amir's Towing
+3           The Beagle Nightclub
+4           Lotus Yoga
+5           Plumbing by Janet
+6           Sushi World
+7           JoeBob's Sportz Barn
+
+Reviews
+id          stars       comment     business_id  user_id
+----------  ----------  ----------  -----------  ----------
+1           4           great food  3            1
+2           3           it was OK   1            2
+3           5           we're defi  5            4
+4           1           horrible    2            3
+
+ select users.firstname, users.lastname, business.name, review.stars, review.comment
+ from users business, review
+ where review.business_id= review.user_id;
+
+select users.firstname, users.lastname, review.stars, review.comment
+from users join review where users.id = review.user_id;
+
+firstname   lastname    stars       comment
+----------  ----------  ----------  ----------
+Bradford    Pitt        4           great food
+Mandy       Kaling      3           it was OK
+Holly       Berry       5           we're defi
+Angela      Jolie       1           horrible
+
+select users.firstname, users.lastname, business.name, review.stars, review.comment
+from users join review join business on users.id = review.user_id and business.id = review.business_id;
