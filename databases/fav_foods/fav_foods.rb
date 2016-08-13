@@ -12,7 +12,7 @@ require 'sqlite3'
 require 'faker'
 
 #creating SQLite3 database
-db = SQLite3::Database.new( "restaurants.db" )
+db = SQLite3::Database.new("restaurants.db")
 
 #string delimiters
 
