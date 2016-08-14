@@ -36,13 +36,13 @@ db.execute(create_restaurants_table_cmd)
 #explore ORM
 
 #use iteration to create many instances of restaurants
-def create_ratings(db,name,address,rating, date_visited)
+def create_ratings(db,name,address,rating)
 date_visited = Faker::Date.backward(14).to_s
 db.execute("Insert into restaurants (name, address, rating, date_visited) values (?, ?, ?, ?)", [name, address, rating, date_visited])
 end
 
 10.times do
-  create_ratings(db,Faker::Company.name, Faker::Address.street_address, 3, date_visited)
+  create_ratings(db,Faker::Company.name, Faker::Address.street_address, 3)
 end
 
 restaurants = db.execute("select * from restaurants")
