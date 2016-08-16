@@ -7,12 +7,12 @@ function addDottedBorder() {
      ourDiv.style.border = "10px dotted black";
 }
 
-function changeHeaderColor() {
-  var ourHeaderColor = document.getElementById("main header");
-  ourHeaderColor.style.color = "red";
+function changeHeaderColor(event) {
+  event.target.style.color = "red";
 }
 
-document.getElementById("main header").addEventListener("click",changeHeaderColor);
+var ourHeaderColor = document.getElementById("main header");
+ourHeaderColor.addEventListener("click",changeHeaderColor);
 
 // changeHeaderColor();
 addDottedBorder();
