@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+}
+#header_div{
+  margin-left:25%;
+  margin-right:25%;
+  background-color: rgb(238, 167, 252);
+  font-color:rgb(16, 116, 163);
+}
+
+#main_body_div{
+  padding:15px;
+  background-color: rgb(136, 220, 228);
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+#hide_button{
+  background-color: red;
+}
+
+#show_button{
+  background-color: green;
+}
