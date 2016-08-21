@@ -19,6 +19,18 @@ get '/about/:person' do
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
 
+get '/contact' do
+  "1234 Ruby Lane"
+end
+
+get '/great_job' do
+  if params[:name]
+    "Great job #{params[:name]}!"
+  else
+    "Great job you!"
+  end
+end
+
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
