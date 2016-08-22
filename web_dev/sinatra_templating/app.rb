@@ -19,9 +19,27 @@ end
 
 # create new students via
 # a form
+
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
 
+get '/student_filter' do
+  @students = db.execute("select * from students where age =?", [params['age'].to_i])
+  erb :student_filter
+  redirect '/'
+end
+
 # add static resources
+
+# get '/filter/new' do
+# erb :student_filter
+# end
+#
+#
+#
+# post '/filter' do
+#   @students = db.execute("select * from students")
+#   erb :student_filter_results
+# end
